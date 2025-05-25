@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: UserService
+  config:
+    import:
+    - optional:configserver:http://localhost:8085
+##Actuator Configurations
+#management:
+#  health:
+#    circuitbreakers:
+#      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include:
+#        - health
+#  endpoint:
+#    health:
+#      show-details: always
+##Resilience 4j Configurations
+#resilience4j: 
+#Circuit Breaker Configurations
+#  circuitbreaker:
+#    instances:
+#      ratingHotelCircuitBreaker: 
+#        registerHealthIndicator: true
+#        event-consumer-buffer-size: 10
+#        failure-rate-threshold: 50
+#        minimum-number-of-calls: 5 
+#        automatic-transition-from-open-to-half-open-enabled: true
+#        wait-duration-in-open-state: 6s
+#        permitted-number-of-calls-in-half-open-state: 3
+#        sliding-window-size: 10
+#        sliding-window-type: count-based
+
+#Retry Configurations
+#  retry:
+#    instances: 
+#      ratingHotelRetry: 
+#        max-attempts: 3
+#        wait-duration: 5s
+
+#Rate Limiter Configurations
+#  ratelimiter:
+#    instances:
+#      ratingHotelRateLimiter: 
+#        limit-refresh-period: 4s
+#        limit-for-period: 2
+#        timeout-duration: 0s
+          
+      
