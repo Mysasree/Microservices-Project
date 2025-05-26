@@ -23,7 +23,8 @@ The project demonstrates inter-service communication, service discovery, central
 - Spring Cloud (Eureka, Config Server, Gateway)
 - Spring Data JPA
 - MySQL
-
+- Maven
+  
 ---
 
 ## 🔁 Microservice Flow
